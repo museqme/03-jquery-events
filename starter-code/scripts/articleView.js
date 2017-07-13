@@ -96,8 +96,8 @@ articleView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any article body.
   $('.read-on').on('click', function(e) {
     e.preventDefault();
-    $('.read-on').hide;
-    $('.article-body *:nth-of-type(n+2)').show();
+    ($(this)).hide();
+    ($(this).prev().children('p')).show();
   });
   // TODO: Add an event handler to reveal all the hidden elements,
   //       when the .read-on link is clicked. You can go ahead and hide the
